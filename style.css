@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 30px 125px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.topbg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  z-index: -1;
+}
+
+hr {
+  visibility: hidden;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header {
+  font-size: 2em;
+  font-weight: 700;
+  margin-left: 10px;
+  padding: 20px 0;
+}
+
+.subheader {
+  margin-left: 10px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.right {
+  margin-right: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right > span {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cardset {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cardset:first-child {
+  margin-left: 0;
+}
+
+.maincard,
+.subcard {
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.maincard {
+  min-height: 200px;
+  height: auto;
+}
+
+.innercontent {
+  padding: 10px 40px;
+  margin: auto auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.maincard::before {
+  content: " ";
+  width: 100%;
+  height: 7px;
+  border-radius: 5px 5px 0 0;
+  top: 0;
+  bottom: 100%;
+}
+
+.maincard#facebook::before {
+  background-color:hsl(208, 92%, 53%);
+}
+.maincard#twitter::before {
+  background-color:hsl(203, 89%, 53%);
+}
+.maincard#instagram::before {
+  background: linear-gradient(to right, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%)
+}
+.maincard#youtube::before {
+  background-color:hsl(348, 97%, 39%);
+}
+
+.subcard {
+  max-height: auto;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardrow {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.icon img {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.summaryvalue {
+  padding-top: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.large {
+  font-size: 4rem;
+}
+
+.followertext {
+  text-align: justify;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.status {
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.status > span {
+  font-size: 12px;
+}
+
+.negative {
+  color: hsl(356, 69%, 56%);
+}
+
+.positive {
+  color: hsl(163, 72%, 41%);
+}
+
+.percent {
+  margin: 0;
+}
+
+.summarydesc {
+  font-weight: 700;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: white;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(28px);
+  -ms-transform: translateX(28px);
+  transform: translateX(28px);
+  background-color: hsl(232, 19%, 15%);
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    padding: 30px 30px;
+  }
+
+  .innercontent {
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 30px 120px;
+  }
+  .top {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .right {
+    width: 90%;
+    margin-left: 10px;
+  }
+
+  hr {
+    visibility: visible;
+    width: 90%;
+    margin: 15px 10px 15px 10px;
+  }
+
+  .cardset {
+    display: flex;
+    flex-flow: column nowrap; 
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 30px 60px;
+  }
+}

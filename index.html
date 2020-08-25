@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link id="themelink" rel="stylesheet" href="light.css">
+  <!--<link rel="stylesheet alternate" href="dark.css">-->
+</head>
+<body>
+
+  <div class="topbg"></div>
+  <div class="top">
+    <div class="heading">
+      <div class="header">
+        Social Media Dashboard
+      </div>
+      <div class="subheader">
+        Total Followers: 23,004
+      </div>
+    </div>
+    <hr>
+    <div class="heading right">
+      <span>Dark Mode</span>
+      <label class="switch" onclick="changeTheme();">
+        <input id="themeselector" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <div class="cardset">
+    <div class="maincard" id="facebook">
+      <div class="innercontent">
+        <div class="icon">
+          <img src="./images/icon-facebook.svg" alt="Facebook Logo">
+          <span>@nathanf</span>
+        </div>
+        <div class="summaryvalue large">
+          1987
+        </div>
+        <div class="followertext">
+          Followers
+        </div>
+        <div class="positive status icon">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>12 Today</span>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="maincard" id="twitter">
+      <div class="innercontent">
+        <div class="icon">
+          <img src="./images/icon-twitter.svg" alt="Twitter Logo">
+          <span>@nathanf</span>
+        </div>
+        <div class="summaryvalue large">
+          1044
+        </div>
+        <div class="followertext">
+          Followers
+        </div>
+        <div class="positive status icon">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>99 Today</span>
+        </div>
+      </div>
+    </div>
+    <div class="maincard" id="instagram">
+      <div class="innercontent">
+        <div class="icon">
+          <img src="./images/icon-instagram.svg" alt="Instagram Logo">
+          <span>@realnathanf</span>
+        </div>
+        <div class="summaryvalue large">
+          11k
+        </div>
+        <div class="followertext">
+          Followers
+        </div>
+        <div class="positive status icon">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>1099 Today</span>
+        </div> 
+      </div>
+      
+    </div>
+    <div class="maincard" id="youtube">
+      <div class="innercontent">
+        <div class="icon">
+          <img src="./images/icon-youtube.svg" alt="YouTube Logo">
+          <span>Nathan F.</span>
+        </div>
+        <div class="summaryvalue large">
+          8239
+        </div>
+        <div class="followertext">
+          Subscribers
+        </div>
+        <div class="negative status icon">
+          <img src="./images/icon-down.svg" alt="Negative Icon">
+          <span>144 Today</span>
+        </div> 
+      </div>
+      
+    </div>
+  </div>
+  <div class="heading">
+    <div class="header overview">
+      Overview - Today
+    </div>
+  </div>
+  <div class="cardset">
+    <div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Page Views
+        </div>
+        <div class="logo">
+          <img src="./images/icon-facebook.svg" alt="Facebook Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          87
+        </div>
+        <div class="positive status percent">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>3%</span>
+        </div>
+      </div>
+    </div>
+    <div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Likes
+        </div>
+        <div class="logo">
+          <img src="./images/icon-facebook.svg" alt="Facebook Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          52
+        </div>
+        <div class="negative status percent">
+          <img src="./images/icon-down.svg" alt="Negative Icon">
+          <span>2%</span> 
+        </div>
+      </div>
+    </div><div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Likes
+        </div>
+        <div class="logo">
+          <img src="./images/icon-twitter.svg" alt="Twitter Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          5462
+        </div>
+        <div class="positive status percent">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>2257%</span>
+        </div>
+      </div>
+    </div><div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Profile Views
+        </div>
+        <div class="logo">
+          <img src="./images/icon-twitter.svg" alt="Twitter Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          52k
+        </div>
+        <div class="positive status percent">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>1375%</span>
+        </div>
+      </div>
+    </div><div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Retweets
+        </div>
+        <div class="logo">
+          <img src="./images/icon-instagram.svg" alt="Instagram Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          117
+        </div>
+        <div class="positive status percent">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>303%</span>
+        </div>
+      </div>
+    </div><div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Likes
+        </div>
+        <div class="logo">
+          <img src="./images/icon-instagram.svg" alt="Instagram Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          507
+        </div>
+        <div class="positive status percent">
+          <img src="./images/icon-up.svg" alt="Positive Icon">
+          <span>553%</span>
+        </div>
+      </div>
+    </div><div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Likes
+        </div>
+        <div class="logo">
+          <img src="./images/icon-youtube.svg" alt="YouTube Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          107
+        </div>
+        <div class="negative status percent">
+          <img src="./images/icon-down.svg" alt="Negative Icon">
+          <span>19%</span>
+        </div>
+      </div>
+    </div><div class="subcard">
+      <div class="cardrow">
+        <div class="summarydesc">
+          Total Views
+        </div>
+        <div class="logo">
+          <img src="./images/icon-youtube.svg" alt="YouTube Logo">
+        </div>
+      </div>
+      <div class="cardrow">
+        <div class="summaryvalue">
+          1407
+        </div>
+        <div class="negative status percent">
+          <img src="./images/icon-down.svg" alt="Negative Icon">
+          <span>12%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://christill.net">Chris Till</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

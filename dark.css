@@ -1,0 +1,21 @@
+body {
+  background-color: hsl(230, 17%, 14%);
+  color: white;
+}
+
+.topbg {
+  background-color: hsl(232, 19%, 15%);
+}
+
+.maincard,
+.subcard {
+  background-color: hsl(228, 28%, 20%);
+}
+
+.followertext,
+.subheader,
+.icon span,
+.summarydesc,
+.top .subheader::after {
+  color: hsl(228, 34%, 66%);
+}
